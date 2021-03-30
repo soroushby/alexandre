@@ -1,0 +1,23 @@
+[debug] [2021-03-30T10:01:01.556Z] ----------------------------------------------------------------------
+[debug] [2021-03-30T10:01:01.559Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\User\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login:ci
+[debug] [2021-03-30T10:01:01.560Z] CLI Version:   9.8.0
+[debug] [2021-03-30T10:01:01.560Z] Platform:      win32
+[debug] [2021-03-30T10:01:01.560Z] Node Version:  v14.15.2
+[debug] [2021-03-30T10:01:01.562Z] Time:          Tue Mar 30 2021 03:01:01 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-03-30T10:01:01.562Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=501893587&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
+[debug] [2021-03-30T10:01:11.897Z] >>> HTTP REQUEST POST https://accounts.google.com/o/oauth2/token  
+ {"code":"4/0AY0e-g58ONtslCoeLarJFM8XasSw5AbQyzwbdXncPGmVqvfKQbhOKfoXqpOxgm8-zALHZA","client_id":"563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com","client_secret":"j9iVZfS8kkCEFUPaAeJV0sAi","redirect_uri":"http://localhost:9005","grant_type":"authorization_code"}
+[debug] [2021-03-30T10:01:12.486Z] <<< HTTP RESPONSE 200 {"date":"Tue, 30 Mar 2021 10:01:07 GMT","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] +  Success! Use this token to login on a CI server:
+
+1//03s4MOgRdQbwvCgYIARAAGAMSNwF-L9IrW4ix_PJ9PNHqs-YUqJ8xNIoJiRNhw_wvO1ue-QqcMJdQxFlww3J2H-6_9OJUqu-AFeQ
+
+Example: firebase deploy --token "$FIREBASE_TOKEN"
+ 

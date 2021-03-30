@@ -1,0 +1,28 @@
+<div class="main" fxLayoutAlign="center center">
+  <mat-card class="card">
+    <form class="container" [formGroup]="form">
+      <div fxLayout="column" fxLayoutAlign="center center" ngClass.lt-md="res">
+        <mat-form-field>
+          <input
+            matInput
+            formControlName="description"
+            placeholder="Enter description"
+          />
+          <mat-error *ngIf="form.get('description').hasError('required')">
+            Name is <strong>required</strong>
+          </mat-error>
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          style="float: right"
+          (click)="onAddDatas()"
+          class="submit-button"
+          [disabled]="form.invalid"
+        >
+          save
+        </button>
+      </div>
+    </form>
+  </mat-card>
+</div>
