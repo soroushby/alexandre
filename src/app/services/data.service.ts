@@ -3,6 +3,7 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 
 import { Observable } from 'rxjs';
+import { ProjectData } from '../interfaces/project-data';
 @Injectable({
   providedIn: 'root',
 })
@@ -15,20 +16,17 @@ export class DataService {
     });
   }
 
-  getData() {
-    return this.db
-      .collection('projects')
-      .snapshotChanges()
-      .pipe(
-        map((data) =>
-          data.map(
-            (data) =>
-              <any>{
-                id: data.payload.doc.id,
-                ...(data.payload.doc.data() as any),
-              }
-          )
-        )
-      );
-  }
+  gotData = this.db
+    .collection('projects')
+    .snapshotChanges()
+    .pipe(
+      map((data) =>
+        data.map((data) => {
+          return {
+            id: data.payload.doc.id,
+            ...(data.payload.doc.data() as ProjectData),
+          };
+        })
+      )
+    );
 }

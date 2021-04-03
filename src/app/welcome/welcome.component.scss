@@ -1,0 +1,115 @@
+// .main {
+//   //background-image: url(../../assets/eugene-lim-w74T9SFYyHc-unsplash.jpg);
+//   background-color: rgb(17, 17, 17);
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+//   min-height: 100vh;
+//   position: relative;
+
+//   &__logo {
+//     position: absolute;
+//     margin: 4rem;
+//     height: 7rem;
+//     width: 7rem;
+//   }
+// }
+
+.main {
+  background-color: rgb(17, 17, 17);
+  min-height: 100vh;
+
+  &__logo {
+    position: absolute;
+    margin: 4rem;
+    height: 7rem;
+    width: 7rem;
+  }
+
+  &-card {
+    width: 70%;
+    height: 60%;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    &__img {
+      //background-image: url(../../assets/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg);
+      background-color: red;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 30rem;
+      min-width: 50rem;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    &__content {
+      color: #aa7dce;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 3rem;
+      font-family: iranyekan;
+    }
+
+    mat-card-title {
+      color: #421964;
+      font-family: iranyekan;
+    }
+  }
+
+  &-btn-position {
+    margin-top: 2rem;
+  }
+
+  &-btn:link,
+  &-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.9s;
+  }
+
+  &-btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+
+  &-btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &-btn-white {
+    //background-color: rgba(7, 6, 44, 0.8);
+    background-color: #421964;
+    color: #f2edeb;
+  }
+
+  &-btn {
+    font-family: iranyekan;
+    font-size: 2rem;
+    font-weight: 200;
+  }
+}
+
+.color {
+  color: white;
+  font-weight: 400;
+  font-size: 8rem;
+}
+
+.logo {
+  //position: absolute;
+  //margin: 4rem;
+  height: 35rem;
+  //width: 30rem;
+}
+
+.test4 {
+  font-size: 30rem;
+}

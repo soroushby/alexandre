@@ -1,4 +1,77 @@
-<div class="test1" *ngFor="let data of datas">
-  {{ data.description }}
+<div class="main" fxLayout="row" fxLayoutGap="4rem">
+  <a routerLink="/welcome"
+    ><img class="main__logo" src="../assets/logoalexandre.jpg" alt="Logo" />
+  </a>
+
+  <div class="color" fxLayout="column" fxLayoutAlign="center">
+    Dark <br />
+    Interior
+  </div>
+
+  <div class="color" fxLayout="column" fxLayoutAlign="center">
+    <a routerLink="/welcome"
+      ><img class="logo" src="../assets/3.png" alt="Logo" />
+    </a>
+  </div>
+
+  <div class="color" fxLayout="column" fxLayoutAlign="center">
+    <a routerLink="/welcome"
+      ><img class="logo" src="../assets/6.png" alt="Logo" />
+    </a>
+  </div>
+
+  <div class="color" fxLayout="column" fxLayoutAlign="center">
+    <a routerLink="/welcome"
+      ><img class="logo" src="../assets/10.png" alt="Logo" />
+    </a>
+  </div>
+
+  <!-- <mat-grid-list cols="3" rowHeight="1:1" gutterSize="4rem">
+    <mat-grid-tile>
+      <mat-card
+        class="main-card"
+        fxLayoutAlign="start center"
+        fxLayout="column"
+        fxLayoutGap="1rem"
+      >
+        <mat-card-header fxLayoutAlign="center center">
+          <mat-card-title><h1>پروژه‌ها</h1></mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content class="main-card__content">
+          ما در ابتدا درخواست شما را بررسی می‌کنیم و سپس بر اساس نیازهای شما
+          بهترین و اقتصادی‌ترین گزینه‌ها را به شما پیشنهاد می دهیم
+        </mat-card-content>
+
+        <div class="main-btn-position" fxLayoutAlign="start center">
+          <a routerLink="/portfolio" class="main-btn main-btn-white"
+            >بیشتر ببینید &rarr;</a
+          >
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card
+        class="main-card__img"
+        fxLayoutAlign="start center "
+        fxLayoutGap="1rem"
+        fxLayout="column"
+      >
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile>
+      <mat-card
+        class="main-card__img"
+        fxLayoutAlign="start center "
+        fxLayoutGap="1rem"
+        fxLayout="column"
+      >
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list> -->
 </div>
-{{ datas }}
+<!-- <div *ngIf="datas | async" class="test4">
+  <div class="" *ngFor="let item of datas">{{ item.id }}</div>
+</div> -->
