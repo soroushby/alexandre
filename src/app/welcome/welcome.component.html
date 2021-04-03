@@ -2,13 +2,93 @@
   <a routerLink="/welcome"
     ><img class="main__logo" src="../assets/logoalexandre.jpg" alt="Logo" />
   </a>
+  <div
+    fxLayout.lt-lg="column"
+    fxLayout="row"
+    fxFlex
+    fxLayoutGap.lt-lg="4rem"
+    fxLayoutGap="4rem"
+  >
+    <div class="color" fxLayoutAlign="start center" ngClass.lt-lg="responsive2">
+      Dark <br />
+      Interior
+    </div>
 
-  <div class="color" fxLayout="column" fxLayoutAlign="center">
-    Dark <br />
-    Interior
+    <div
+      class="row"
+      fxLayout="row"
+      fxFlex
+      fxLayoutAlign="start center"
+      fxLayout.lt-lg="column"
+      ngClass.lt-lg="responsive1"
+      fxLayoutGap.lt-lg="4rem"
+    >
+      <div class="col-1-of-3" fxFlex>
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-1">&nbsp;</div>
+            <!-- <div class="card__heading"></div> -->
+          </div>
+          <div
+            class="card__side card__side--back card__side--back-1"
+            fxLayoutAlign="center center"
+            fxLayout="row"
+          >
+            <div class="card__cta">
+              <div class="btn-position">
+                <a routerLink="/portfolio" class="btn btn-white"
+                  >see more &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-2-of-3" fxFlex>
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-2">&nbsp;</div>
+            <!-- <div class="card__heading"></div> -->
+          </div>
+          <div
+            class="card__side card__side--back card__side--back-1"
+            fxLayoutAlign="center center"
+          >
+            <div class="card__cta">
+              <div class="btn-position">
+                <a routerLink="/portfolio" class="btn btn-white"
+                  >see more &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3-of-3" fxFlex>
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-3">&nbsp;</div>
+            <!-- <div class="card__heading"></div> -->
+          </div>
+          <div
+            class="card__side card__side--back card__side--back-1"
+            fxLayoutAlign="center center"
+          >
+            <div class="card__cta">
+              <div class="btn-position">
+                <a routerLink="/portfolio" class="btn btn-white"
+                  >see more &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="color" fxLayout="column" fxLayoutAlign="center">
+  <!-- <div class="color" fxLayout="column" fxLayoutAlign="center">
     <a routerLink="/welcome"
       ><img class="logo" src="../assets/3.png" alt="Logo" />
     </a>
@@ -24,7 +104,7 @@
     <a routerLink="/welcome"
       ><img class="logo" src="../assets/10.png" alt="Logo" />
     </a>
-  </div>
+  </div> -->
 
   <!-- <mat-grid-list cols="3" rowHeight="1:1" gutterSize="4rem">
     <mat-grid-tile>
@@ -71,7 +151,8 @@
       </mat-card>
     </mat-grid-tile>
   </mat-grid-list> -->
-</div>
-<!-- <div *ngIf="datas | async" class="test4">
+
+  <!-- <div *ngIf="datas | async" class="test4">
   <div class="" *ngFor="let item of datas">{{ item.id }}</div>
 </div> -->
+</div>
