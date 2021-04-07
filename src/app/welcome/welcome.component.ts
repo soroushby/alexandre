@@ -12,8 +12,8 @@ import { DataService } from './../services/data.service';
 export class WelcomeComponent implements OnInit {
   constructor(private dataservice: DataService) {}
 
-  datas: any = [];
+  data: Observable<ProjectData[]> | undefined;
   ngOnInit(): void {
-    this.datas = this.dataservice.gotData.subscribe();
+    this.data = this.dataservice.gotData;
   }
 }

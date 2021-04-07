@@ -1,4 +1,4 @@
-<!-- <div class="main" fxLayoutAlign="center center">
+<div class="main" fxLayoutAlign="center center">
   <mat-card class="card">
     <form class="container" [formGroup]="form">
       <div fxLayout="column" fxLayoutAlign="center center" ngClass.lt-md="res">
@@ -13,6 +13,18 @@
           </mat-error>
         </mat-form-field>
 
+        <mat-form-field appearance="fill">
+          <mat-label>Category</mat-label>
+          <mat-select formControlName="categories">
+            <mat-option
+              *ngFor="let category of categories"
+              [value]="category.value"
+            >
+              {{ category.viewValue }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
         <button
           mat-raised-button
           style="float: right"
@@ -24,5 +36,7 @@
         </button>
       </div>
     </form>
+
+    {{ form.value | json }}
   </mat-card>
-</div> -->
+</div>

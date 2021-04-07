@@ -9,14 +9,24 @@ import { FormBuilder, Validators } from '@angular/forms';
 })
 export class AddProjectComponent implements OnInit {
   form: any;
+  categories: any = [
+    { value: 'restaurant', viewValue: 'restaurant' },
+    { value: 'boulangerie', viewValue: 'boulangerie' },
+    { value: 'architecture', viewValue: 'architecture' },
+  ];
+
   constructor(private fb: FormBuilder, private dataService: DataService) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
       description: ['', Validators.required],
+      categories: ['', Validators.required],
     });
   }
   onAddDatas() {
-    this.dataService.addProject(this.form.get('description').value);
+    this.dataService.addProject(
+      this.form.get('description').value,
+      this.form.get('categories').value
+    );
   }
 }

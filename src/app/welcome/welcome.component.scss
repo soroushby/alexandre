@@ -1,124 +1,45 @@
-// .main {
-//   //background-image: url(../../assets/eugene-lim-w74T9SFYyHc-unsplash.jpg);
-//   background-color: rgb(17, 17, 17);
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-//   min-height: 100vh;
-//   position: relative;
-
-//   &__logo {
-//     position: absolute;
-//     margin: 4rem;
-//     height: 7rem;
-//     width: 7rem;
-//   }
-// }
-
 .main {
-  background-color: rgb(197, 197, 197);
+  background-color: black;
   min-height: 100vh;
 
   &__logo {
     position: absolute;
-    margin: 4rem;
-    height: 7rem;
-    width: 7rem;
+    margin: 2rem;
+    height: 10rem;
+    width: 10rem;
   }
+}
 
-  //   &-card {
-  //     width: 70%;
-  //     height: 60%;
-  //     background-color: transparent;
-  //     border-radius: 0;
-  //     box-shadow: none;
-
-  //     &__img {
-  //       //background-image: url(../../assets/alberto-castillo-q-mx4mSkK9zeo-unsplash.jpg);
-  //       background-color: red;
-  //       background-repeat: no-repeat;
-  //       background-position: center;
-  //       background-size: cover;
-  //       min-height: 30rem;
-  //       min-width: 50rem;
-  //       border-radius: 0;
-  //       box-shadow: none;
-  //     }
-
-  //     &__content {
-  //       color: #aa7dce;
-  //       font-size: 2rem;
-  //       text-align: center;
-  //       line-height: 3rem;
-  //       font-family: iranyekan;
-  //     }
-
-  //     mat-card-title {
-  //       color: #421964;
-  //       font-family: iranyekan;
-  //     }
-  //   }
-
-  //   &-btn-position {
-  //     margin-top: 2rem;
-  //   }
-
-  //   &-btn:link,
-  //   &-btn:visited {
-  //     text-transform: uppercase;
-  //     text-decoration: none;
-  //     padding: 1.5rem 4rem;
-  //     display: inline-block;
-  //     border-radius: 10rem;
-  //     transition: all 0.9s;
-  //   }
-
-  //   &-btn:hover {
-  //     transform: translateY(-0.3rem);
-  //     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-  //     transform: scale(1.1);
-  //   }
-
-  //   &-btn:active {
-  //     transform: translateY(-0.1rem);
-  //     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  //   }
-
-  //   &-btn-white {
-  //     //background-color: rgba(7, 6, 44, 0.8);
-  //     background-color: #421964;
-  //     color: #f2edeb;
-  //   }
-
-  //   &-btn {
-  //     font-family: iranyekan;
-  //     font-size: 2rem;
-  //     font-weight: 200;
-  //   }
+.line {
+  //position: absolute;
+  border-left: 4px solid #d4af37;
+  height: 71.5rem;
 }
 
 .color {
   color: white;
   font-weight: 400;
-  font-size: 8rem;
+  font-size: 5rem;
 }
-
-// .logo {
-//   //position: absolute;
-//   //margin: 4rem;
-//   height: 35rem;
-//   //width: 30rem;
-// }
-
-// .test4 {
-//   font-size: 30rem;
-// }
 
 .card {
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
   height: 50rem;
+
+  &__heading {
+    font-size: 3.5rem;
+    //font-weight: 50;
+    margin-bottom: 5rem;
+    color: rgb(255, 255, 255);
+  }
+
+  &__content {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: white;
+  }
 
   &__side {
     font-size: 2rem;
@@ -142,7 +63,7 @@
       transform: rotateY(180deg);
 
       &-1 {
-        background-image: linear-gradient(to right bottom, #5d7b6f, #de741c);
+        background-image: linear-gradient(to right bottom, #d4af37, #d4af37);
         width: 30rem;
       }
     }
@@ -162,34 +83,21 @@
     width: 30rem;
 
     &-1 {
-      background-image: url(../../assets/10.png);
+      background-image: url(../../assets/32.png);
       background-position: center;
     }
 
     &-2 {
-      background-image: url(../../assets/3.png);
+      background-image: url(../../assets/1_Post.jpg);
       background-position: center;
     }
 
     &-3 {
-      background-image: url(../../assets/6.png);
+      background-image: url(../../assets/16.png);
       background-position: center;
     }
   }
-
-  // &__cta {
-  //   //position: absolute;
-  //   top: 50%;
-  //   left: 50%;
-  //   transform: translateX(-50%, -50%);
-  //   width: 90%;
-  //   text-align: center;
-  // }
 }
-
-// .btn-position {
-//   margin-top: 2rem;
-// }
 
 .btn:link,
 .btn:visited {
@@ -213,9 +121,8 @@
 }
 
 .btn-white {
-  //background-color: rgba(7, 6, 44, 0.8);
-  background-color: #f8a41d;
-  color: #f2edeb;
+  background-color: black;
+  color: white;
 }
 
 .btn {
@@ -229,4 +136,137 @@
 
 .responsive2 {
   margin-top: 12rem;
+}
+
+.test4 {
+  font-size: 2rem;
+}
+
+.main2 {
+  background-color: black;
+  min-height: 90vh;
+
+  &-card {
+    width: 90%;
+    height: 60%;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    &__img {
+      background-image: url(../../assets/profile.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      min-height: 45rem;
+      min-width: 30rem;
+      box-shadow: none;
+      border-radius: 0;
+
+      // border-style: solid;
+      // border-width: 8px;
+      // border-color: #d4af37;
+      border: 5px solid #d4af37;
+    }
+
+    &__content {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 3rem;
+
+      &-margin {
+        margin-top: 2rem;
+      }
+    }
+
+    mat-card-title {
+      color: white;
+      font-weight: 100;
+      //font-size: 1rem;
+    }
+  }
+
+  &-btn-position {
+    margin-top: 2rem;
+  }
+
+  &-btn:link,
+  &-btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.9s;
+  }
+
+  &-btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+  }
+
+  &-btn:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &-btn-white {
+    background-color: #d4af37;
+    color: white;
+  }
+
+  &-btn {
+    font-size: 2rem;
+    font-weight: 200;
+  }
+
+  mat-icon {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 3rem;
+  }
+}
+
+.main3 {
+  background-image: url(../../assets/39.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 70vh;
+}
+
+.main4 {
+  background-color: black;
+  min-height: 30vh;
+
+  &-card {
+    width: 90%;
+    height: 60%;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    &__content {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 3rem;
+    }
+
+    mat-card-title {
+      color: white;
+    }
+  }
+}
+.credit {
+  background-color: black;
+  min-height: 5vh;
+
+  &-content,
+  mat-icon {
+    font-size: 12px;
+    color: white;
+  }
 }

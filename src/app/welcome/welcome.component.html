@@ -1,7 +1,8 @@
 <div class="main" fxLayout="row" fxLayoutGap="4rem">
   <a routerLink="/welcome"
-    ><img class="main__logo" src="../assets/logoalexandre.jpg" alt="Logo" />
+    ><img class="main__logo" src="../../assets/Untitled-1.png" alt="Logo" />
   </a>
+
   <div
     fxLayout.lt-lg="column"
     fxLayout="row"
@@ -10,10 +11,10 @@
     fxLayoutGap="4rem"
   >
     <div class="color" fxLayoutAlign="start center" ngClass.lt-lg="responsive2">
-      Dark <br />
-      Interior
+      ALEXANDRE <br />
+      MASHHADI
     </div>
-
+    <div class="line"></div>
     <div
       class="row"
       fxLayout="row"
@@ -27,16 +28,16 @@
         <div class="card">
           <div class="card__side card__side--front">
             <div class="card__picture card__picture-1">&nbsp;</div>
-            <!-- <div class="card__heading"></div> -->
           </div>
           <div
             class="card__side card__side--back card__side--back-1"
             fxLayoutAlign="center center"
-            fxLayout="row"
+            fxLayout="column"
           >
+            <div class="card__heading">Restaurant&Bar</div>
             <div class="card__cta">
               <div class="btn-position">
-                <a routerLink="/portfolio" class="btn btn-white"
+                <a routerLink="/restaurant" class="btn btn-white"
                   >see more &rarr;</a
                 >
               </div>
@@ -49,15 +50,16 @@
         <div class="card">
           <div class="card__side card__side--front">
             <div class="card__picture card__picture-2">&nbsp;</div>
-            <!-- <div class="card__heading"></div> -->
           </div>
           <div
             class="card__side card__side--back card__side--back-1"
             fxLayoutAlign="center center"
+            fxLayout="column"
           >
+            <div class="card__heading">Boulangerie</div>
             <div class="card__cta">
               <div class="btn-position">
-                <a routerLink="/portfolio" class="btn btn-white"
+                <a routerLink="/boulangerie" class="btn btn-white"
                   >see more &rarr;</a
                 >
               </div>
@@ -70,15 +72,16 @@
         <div class="card">
           <div class="card__side card__side--front">
             <div class="card__picture card__picture-3">&nbsp;</div>
-            <!-- <div class="card__heading"></div> -->
           </div>
           <div
             class="card__side card__side--back card__side--back-1"
             fxLayoutAlign="center center"
+            fxLayout="column"
           >
+            <div class="card__heading">Architecture</div>
             <div class="card__cta">
               <div class="btn-position">
-                <a routerLink="/portfolio" class="btn btn-white"
+                <a routerLink="/architecture" class="btn btn-white"
                   >see more &rarr;</a
                 >
               </div>
@@ -88,71 +91,117 @@
       </div>
     </div>
   </div>
-  <!-- <div class="color" fxLayout="column" fxLayoutAlign="center">
-    <a routerLink="/welcome"
-      ><img class="logo" src="../assets/3.png" alt="Logo" />
-    </a>
+</div>
+
+<div
+  class="main2"
+  fxLayout="row"
+  fxLayoutGap="4rem"
+  fxLayoutAlign="center center"
+  fxLayout.lt-lg="column"
+>
+  <div>
+    <mat-card class="main2-card__img" fxLayoutAlign="center"> </mat-card>
   </div>
 
-  <div class="color" fxLayout="column" fxLayoutAlign="center">
-    <a routerLink="/welcome"
-      ><img class="logo" src="../assets/6.png" alt="Logo" />
-    </a>
-  </div>
+  <div fxLayoutAlign="center" fxFlex="50%">
+    <mat-card class="main2-card" fxLayout="column" fxLayoutGap="1rem">
+      <mat-card-header fxLayoutAlign="center center">
+        <mat-card-title><h1>À Propos</h1></mat-card-title>
+      </mat-card-header>
 
-  <div class="color" fxLayout="column" fxLayoutAlign="center">
-    <a routerLink="/welcome"
-      ><img class="logo" src="../assets/10.png" alt="Logo" />
-    </a>
-  </div> -->
+      <mat-card-content class="main2-card__content">
+        <div>
+          C’est la rencontre et la collaboration de talents passionnés à fort
+          potentiel créatif, au service d’une clientèle diversifiée, pour une
+          architecture réfléchie et de qualité. “Des professionnels engagés
+          ayant des spécificités différentes, réunis pour créer, organiser,
+          innover et réfléchir ensemble aux projects.” “Alexandre Mashhadi,
+          c’est un cercle de compétences, de créatifs curieux et engagés”
+        </div>
 
-  <!-- <mat-grid-list cols="3" rowHeight="1:1" gutterSize="4rem">
-    <mat-grid-tile>
-      <mat-card
-        class="main-card"
-        fxLayoutAlign="start center"
+        <div class="main2-card__content-margin">
+          École Nationale Supérieure d’Architecture de Paris La Villette ENSAPLV
+        </div>
+      </mat-card-content>
+
+      <div
+        class="main2-btn-position"
+        fxLayoutAlign="center center"
         fxLayout="column"
-        fxLayoutGap="1rem"
+        fxLayoutGap="2rem"
       >
-        <mat-card-header fxLayoutAlign="center center">
-          <mat-card-title><h1>پروژه‌ها</h1></mat-card-title>
-        </mat-card-header>
+        <a class="main2-email" href="mailto:atelier.mashhadi@gmail.com"
+          ><mat-icon>mail</mat-icon></a
+        >
 
-        <mat-card-content class="main-card__content">
-          ما در ابتدا درخواست شما را بررسی می‌کنیم و سپس بر اساس نیازهای شما
-          بهترین و اقتصادی‌ترین گزینه‌ها را به شما پیشنهاد می دهیم
-        </mat-card-content>
+        <a routerLink="/aboutme" class="main2-btn main2-btn-white"
+          >see more &rarr;</a
+        >
+      </div>
+    </mat-card>
+  </div>
+</div>
 
-        <div class="main-btn-position" fxLayoutAlign="start center">
-          <a routerLink="/portfolio" class="main-btn main-btn-white"
-            >بیشتر ببینید &rarr;</a
+<div class="main3">
+  <!-- <mat-card class="main3__img" fxLayoutAlign="center"> </mat-card> -->
+</div>
+
+<div
+  class="main4"
+  fxLayout="row"
+  fxLayoutGap="4rem"
+  fxLayoutAlign="center center"
+  fxLayout.lt-lg="column"
+>
+  <div fxLayoutAlign="center" fxFlex="33%">
+    <mat-card class="main4-card" fxLayout="column" fxLayoutGap="1rem">
+      <!-- <mat-card-header fxLayoutAlign="center center">
+        <mat-card-title><h1>lorem</h1></mat-card-title>
+      </mat-card-header> -->
+
+      <mat-card-content class="main4-card__content">
+        <div fxLayoutGap="1rem">
+          <img
+            src="../../assets/location_on_white_24dp.svg"
+            alt="address icon"
+          /><span>35, rue Hyppolyte<br />Maindron<br />75014 Paris</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayoutAlign="center" fxFlex="33%">
+    <mat-card class="main4-card" fxLayout="column" fxLayoutGap="1rem">
+      <mat-card-content class="main4-card__content">
+        <div fxLayoutGap="1rem" fxLayoutAlign="center center">
+          <img src="../../assets/call_white_24dp.svg" alt="phone icon" /><span
+            >01.75.50.42.08</span
           >
         </div>
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <mat-card
-        class="main-card__img"
-        fxLayoutAlign="start center "
-        fxLayoutGap="1rem"
-        fxLayout="column"
-      >
-      </mat-card>
-    </mat-grid-tile>
-
-    <mat-grid-tile>
-      <mat-card
-        class="main-card__img"
-        fxLayoutAlign="start center "
-        fxLayoutGap="1rem"
-        fxLayout="column"
-      >
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list> -->
-
-  <div *ngIf="datas" class="test4">
-    <div class="" *ngFor="let item of datas">{{ item.id }}</div>
+      </mat-card-content>
+    </mat-card>
   </div>
+
+  <div fxLayoutAlign="center" fxFlex="33%">
+    <mat-card class="main4-card" fxLayout="column" fxLayoutGap="1rem">
+      <mat-card-content class="main4-card__content">
+        <div fxLayoutGap="1rem" fxLayoutAlign="center center">
+          <img
+            src="../../assets/markunread_white_24dp.svg"
+            alt="mail icon"
+          /><span>atelier.mashhadi@gmail.com</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="credit" fxLayout="row" fxLayoutAlign="center center">
+  <p class="credit-content" fxLayout="row" fxLayoutAlign="center center">
+    <span fxLayout="row" fxLayoutAlign="center center"
+      ><mat-icon fxLayoutAlign="center center">copyright</mat-icon>2021 -
+      Designed by emit</span
+    >
+  </p>
 </div>

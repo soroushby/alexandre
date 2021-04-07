@@ -10,9 +10,10 @@ import { ProjectData } from '../interfaces/project-data';
 export class DataService {
   constructor(private db: AngularFirestore) {}
 
-  addProject(description: any) {
+  addProject(description: any, categories: any) {
     this.db.collection('projects').add({
       description: description,
+      categories: categories,
     });
   }
 
@@ -20,13 +21,14 @@ export class DataService {
     .collection('projects')
     .snapshotChanges()
     .pipe(
-      map((data) =>
-        data.map((data) => {
-          return {
-            id: data.payload.doc.id,
-            ...(data.payload.doc.data() as ProjectData),
-          };
-        })
+      map((projectsData) =>
+        projectsData.map(
+          (data) =>
+            ({
+              id: data.payload.doc.id,
+              ...(data.payload.doc.data() as ProjectData),
+            } as ProjectData)
+        )
       )
     );
 }
