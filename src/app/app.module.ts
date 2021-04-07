@@ -6,6 +6,7 @@ import { environment } from '../environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthModule } from '@auth0/auth0-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -41,6 +42,10 @@ import { AddProjectComponent } from './add-project/add-project.component';
     AngularFirestoreModule,
     AngularFireAnalyticsModule,
     ReactiveFormsModule,
+    AuthModule.forRoot({
+      domain: 'dev-e4qhu3di.auth0.com',
+      clientId: 'a7hRFsKYD719glB2dvgxChWl5wBK1Nt2',
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
