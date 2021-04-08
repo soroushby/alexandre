@@ -1,0 +1,35 @@
+.main {
+  background-color: black;
+  min-height: 100vh;
+
+  &__logo {
+    position: absolute;
+    margin: 2rem;
+    height: 10rem;
+    width: 10rem;
+  }
+
+  .img {
+    //background-size: cover;
+    background-position: center;
+    height: 70rem;
+    width: 135rem;
+  }
+}
+
+mat-card {
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+h1 {
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  color: #d4af37;
+}
+
+.line {
+  //position: absolute;
+  border-bottom: 4px solid #d4af37;
+  width: 71.5rem;
+}

@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'restaurant', component: RestaurantComponent },
   { path: 'boulangerie', component: BakeryComponent },
   { path: 'architecture', component: ArchitectureComponent },
-  { path: 'addproject', component: AddProjectComponent },
+  { path: 'addproject941120', component: AddProjectComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

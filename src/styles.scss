@@ -32,3 +32,14 @@ body {
   background: black;
   border-radius: 10px;
 }
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #d4af37;
+}
+
+::selection {
+  color: white;
+  background: #d4af37;
+}
