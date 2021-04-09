@@ -12,8 +12,8 @@
   .img {
     //background-size: cover;
     background-position: center;
-    height: 70rem;
-    width: 135rem;
+    height: 50rem;
+    width: 60rem;
   }
 }
 
@@ -71,4 +71,13 @@ h1 {
     font-size: 12px;
     color: white;
   }
+}
+
+.image {
+  width: 4rem;
+  height: 4rem;
+}
+
+.file-input {
+  font-size: 2rem;
 }

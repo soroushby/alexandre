@@ -17,7 +17,7 @@ export class DataService {
     });
   }
 
-  deleteEpisodes(id: any) {
+  deleteProjects(id: any) {
     return this.db.collection('projects').doc(id).delete();
   }
 

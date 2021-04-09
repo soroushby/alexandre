@@ -8,18 +8,51 @@
   fxLayoutGap="6rem"
 >
   <h1>Restaurant&Bar</h1>
-  <!-- <ng-container *ngIf="data | async as items">
+  <ng-container *ngIf="data | async as items">
     <div *ngFor="let item of items">
       <mat-card class="main-card">
-        <img
-          class="img"
-          src="../../../assets/1.jpg"
-          alt="render of Restaurant&Bar"
+        <img class="img" [src]="downloadUrl$ | async" />
+
+        <div class="test1" fxLayoutAlign="center">
+          Name:{{ item.description }}
+        </div>
+        <div
+          fxHide
+          class="test1"
+          name="someInput"
+          [(ngModel)]="someInput"
+          ngDefaultControl
+          #idMain
+        >
+          {{ item.id }}
+        </div>
+        <input
+          type="file"
+          class="file-input"
+          #fileupload
+          (change)="onFileSelected($event, item.id)"
         />
-        <div class="test1">{{ item.description }}</div>
+        <div>
+          <mat-form-field>
+            <input matInput [disabled]="true" [value]="fileName" />
+          </mat-form-field>
+
+          <button mat-mini-fab color="primary" (click)="fileupload.click()">
+            <mat-icon>attach_file</mat-icon>
+          </button>
+        </div>
+        <button
+          fxFlexAlign="center"
+          class="submit-button"
+          color="warn"
+          mat-raised-button
+          (click)="onDeleteProject(item.id)"
+        >
+          Delete
+        </button>
       </mat-card>
     </div>
-  </ng-container> -->
+  </ng-container>
   <div class="line"></div>
 </div>
 

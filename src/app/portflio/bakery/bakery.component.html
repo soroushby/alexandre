@@ -77,3 +77,11 @@
     >
   </p>
 </div>
+<ng-container *ngIf="data | async as items">
+  <div *ngFor="let item of items">
+    <mat-card class="main-card">
+      <div class="test1">{{ item.description }}</div>
+      <div>{{ item.photo }}</div>
+    </mat-card>
+  </div></ng-container
+>

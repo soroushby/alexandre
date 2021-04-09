@@ -39,7 +39,6 @@ export class AddProjectComponent implements OnInit {
     this.form = this.fb.group({
       description: ['', Validators.required],
       categories: ['', Validators.required],
-      // photo: [null, Validators.required],
     });
     this.data = this.dataService.gotData
       .pipe(map((x) => x.map((x) => x.id)))
@@ -52,15 +51,15 @@ export class AddProjectComponent implements OnInit {
     );
   }
 
-  onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    const filePath = `courses/${this.data}/${file.name}`;
-    const task = this.storage.upload(filePath, file);
-    task.snapshotChanges().subscribe((x) => console.log(x));
-    // if (file) {
-    //   this.fileName = file.name;
+  // onFileSelected(event: any) {
+  //   const file: File = event.target.files[0];
+  //   const filePath = `courses/${this.data}/${file.name}`;
+  //   const task = this.storage.upload(filePath, file);
+  //   task.snapshotChanges().subscribe((x) => console.log(x));
+  //   // if (file) {
+  //   //   this.fileName = file.name;
 
-    //   console.log(this.fileName);
-    // }
-  }
+  //   //   console.log(this.fileName);
+  //   // }
+  // }
 }

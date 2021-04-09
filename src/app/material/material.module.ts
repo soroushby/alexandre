@@ -11,6 +11,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
+import { MaterialFileInputModule } from 'ngx-material-file-input';
 
 @NgModule({
   declarations: [],
@@ -27,6 +28,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatGridListModule,
     MatSelectModule,
+    MaterialFileInputModule,
   ],
   exports: [
     MatButtonModule,
@@ -40,6 +42,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatCardModule,
     MatGridListModule,
     MatSelectModule,
+    MaterialFileInputModule,
   ],
 })
 export class MaterialModule {}

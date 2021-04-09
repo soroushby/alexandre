@@ -5,7 +5,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthModule } from '@auth0/auth0-angular';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -46,6 +46,7 @@ import { AddProjectComponent } from './add-project/add-project.component';
       domain: 'dev-e4qhu3di.auth0.com',
       clientId: 'a7hRFsKYD719glB2dvgxChWl5wBK1Nt2',
     }),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
