@@ -1,13 +1,4 @@
 {
-  "targets": {
-    "alexandremashadi": {
-      "hosting": {
-        "rezaMashadiWeb": [
-          "alexandremashadi"
-        ]
-      }
-    }
-  },
   "projects": {
     "default": "alexandremashadi"
   }

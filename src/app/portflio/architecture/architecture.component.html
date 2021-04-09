@@ -1,1 +1,83 @@
-<p>architecture works!</p>
+<a routerLink="/welcome"
+  ><img class="main__logo" src="../../assets/Untitled-1.png" alt="Logo" />
+</a>
+<div
+  class="main"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="6rem"
+>
+  <h1>Architecture</h1>
+  <!-- <ng-container *ngIf="data | async as items">
+    <div *ngFor="let item of items">
+      <mat-card class="main-card">
+        <img
+          class="img"
+          src="../../../assets/1.jpg"
+          alt="render of Architecture"
+        />
+        <div class="test1">{{ item.description }}</div>
+      </mat-card>
+    </div>
+  </ng-container> -->
+  <div class="line"></div>
+</div>
+
+<div
+  class="main4"
+  fxLayout="row"
+  fxLayoutGap="4rem"
+  fxLayoutAlign="center center"
+  fxLayout.lt-lg="column"
+>
+  <div fxLayoutAlign="center" fxFlex="33%">
+    <mat-card class="main4-card" fxLayout="column" fxLayoutGap="1rem">
+      <!-- <mat-card-header fxLayoutAlign="center center">
+        <mat-card-title><h1>lorem</h1></mat-card-title>
+      </mat-card-header> -->
+
+      <mat-card-content class="main4-card__content">
+        <div fxLayoutGap="1rem">
+          <img
+            src="../../assets/location_on_white_24dp.svg"
+            alt="address icon"
+          /><span>35, rue Hyppolyte<br />Maindron<br />75014 Paris</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayoutAlign="center" fxFlex="33%">
+    <mat-card class="main4-card" fxLayout="column" fxLayoutGap="1rem">
+      <mat-card-content class="main4-card__content">
+        <div fxLayoutGap="1rem" fxLayoutAlign="center center">
+          <img src="../../assets/call_white_24dp.svg" alt="phone icon" /><span
+            >01.75.50.42.08</span
+          >
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div fxLayoutAlign="center" fxFlex="33%">
+    <mat-card class="main4-card" fxLayout="column" fxLayoutGap="1rem">
+      <mat-card-content class="main4-card__content">
+        <div fxLayoutGap="1rem" fxLayoutAlign="center center">
+          <img
+            src="../../assets/markunread_white_24dp.svg"
+            alt="mail icon"
+          /><span>atelier.mashhadi@gmail.com</span>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+
+<div class="credit" fxLayout="row" fxLayoutAlign="center center">
+  <p class="credit-content" fxLayout="row" fxLayoutAlign="center center">
+    <span fxLayout="row" fxLayoutAlign="center center"
+      ><mat-icon fxLayoutAlign="center center">copyright</mat-icon>2021 -
+      Designed by emit</span
+    >
+  </p>
+</div>

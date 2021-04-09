@@ -33,3 +33,42 @@ h1 {
   border-bottom: 4px solid #d4af37;
   width: 71.5rem;
 }
+
+.test1 {
+  font-size: 2rem;
+}
+
+.main4 {
+  background-color: black;
+  min-height: 30vh;
+
+  &-card {
+    width: 90%;
+    height: 60%;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    &__content {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 3rem;
+    }
+
+    mat-card-title {
+      color: white;
+    }
+  }
+}
+
+.credit {
+  background-color: black;
+  min-height: 5vh;
+
+  &-content,
+  mat-icon {
+    font-size: 12px;
+    color: white;
+  }
+}

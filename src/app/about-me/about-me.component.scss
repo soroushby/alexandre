@@ -10,10 +10,10 @@
   }
 
   &-card {
-    width: 95%;
-    height: 70%;
-    //background-color: transparent;
-    background-color: brown;
+    min-width: 90rem;
+    min-height: 50rem;
+    background-color: transparent;
+    //background-color: brown;
     border-radius: 0;
     box-shadow: none;
 
@@ -33,5 +33,46 @@
     color: white;
     font-weight: 100;
     //font-size: 1rem;
+  }
+}
+
+.line {
+  //position: absolute;
+  border-bottom: 4px solid #d4af37;
+  min-width: 70rem;
+}
+
+.main4 {
+  background-color: black;
+  min-height: 30vh;
+
+  &-card {
+    width: 90%;
+    height: 60%;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    &__content {
+      color: white;
+      font-size: 2rem;
+      text-align: center;
+      line-height: 3rem;
+    }
+
+    mat-card-title {
+      color: white;
+    }
+  }
+}
+
+.credit {
+  background-color: black;
+  min-height: 5vh;
+
+  &-content,
+  mat-icon {
+    font-size: 12px;
+    color: white;
   }
 }

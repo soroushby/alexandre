@@ -10,12 +10,12 @@ import { filter, map } from 'rxjs/operators';
   styleUrls: ['./restaurant.component.scss'],
 })
 export class RestaurantComponent implements OnInit {
-  data: any;
+  data: Observable<ProjectData[]> | undefined;
   constructor(private datasService: DataService) {}
 
   ngOnInit(): void {
-    this.data = this.datasService.gotData
-      .pipe(map((x) => x.filter((x) => x.categories == 'restaurant')))
-      .subscribe((x) => console.log(x));
+    this.data = this.datasService.gotData.pipe(
+      map((x) => x.filter((x) => x.categories == 'restaurant'))
+    );
   }
 }
