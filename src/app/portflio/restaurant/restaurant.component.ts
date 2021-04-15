@@ -1,10 +1,10 @@
-import { AuthService } from '@auth0/auth0-angular';
 import { DataService } from './../../services/data.service';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProjectData } from 'src/app/interfaces/project-data';
 import { concatMap, filter, last, map } from 'rxjs/operators';
 import { AngularFireStorage } from '@angular/fire/storage';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-restaurant',
@@ -40,7 +40,6 @@ export class RestaurantComponent implements OnInit {
         )
       )
       .subscribe((x) => (this.id = x));
-    console.log(this.id);
   }
 
   onFileSelected(event: any, idMain: any) {

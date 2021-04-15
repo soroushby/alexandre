@@ -17,7 +17,6 @@
           Name:{{ item.description }}
         </div>
         <div
-          fxHide
           class="test1"
           name="someInput"
           [(ngModel)]="someInput"
@@ -26,34 +25,36 @@
         >
           {{ item.id }}
         </div>
-        <input
-          type="file"
-          class="file-input"
-          #fileupload
-          (change)="onFileSelected($event, item.id)"
-        />
-        <div>
-          <mat-form-field>
-            <input matInput [disabled]="true" [value]="fileName" />
-          </mat-form-field>
+        <ng-container>
+          <input
+            type="file"
+            class="file-input"
+            #fileupload
+            (change)="onFileSelected($event, item.id[0])"
+          />
+          <div>
+            <mat-form-field>
+              <input matInput [disabled]="true" [value]="fileName" />
+            </mat-form-field>
 
-          <button mat-mini-fab color="primary" (click)="fileupload.click()">
-            <mat-icon>attach_file</mat-icon>
+            <button mat-mini-fab color="primary" (click)="fileupload.click()">
+              <mat-icon>attach_file</mat-icon>
+            </button>
+          </div>
+          <button
+            fxFlexAlign="center"
+            class="submit-button"
+            color="warn"
+            mat-raised-button
+            (click)="onDeleteProject(item.id)"
+          >
+            Delete
           </button>
-        </div>
-        <button
-          fxFlexAlign="center"
-          class="submit-button"
-          color="warn"
-          mat-raised-button
-          (click)="onDeleteProject(item.id)"
-        >
-          Delete
-        </button>
+        </ng-container>
       </mat-card>
     </div>
   </ng-container>
-  <div class="line"></div>
+  <div class="line" fxHide.lt-lg></div>
 </div>
 
 <div
