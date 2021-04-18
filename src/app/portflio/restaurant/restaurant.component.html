@@ -7,11 +7,15 @@
   fxLayoutAlign="center center"
   fxLayoutGap="6rem"
 >
-  <h1>Restaurant&Bar</h1>
+  <h1 ngClass.lt-lg="responsiveTxt">Restaurant&Bar</h1>
   <ng-container *ngIf="data | async as items">
     <div *ngFor="let item of items">
-      <mat-card class="main-card">
-        <img class="img" [src]="downloadUrl$ | async" />
+      <mat-card class="main-card" ngClass.lt-lg="responsiveCard">
+        <img
+          class="img"
+          ngClass.lt-lg="responsiveImg"
+          [src]="downloadUrl$ | async"
+        />
 
         <div class="test1" fxLayoutAlign="center">
           Name:{{ item.description }}
