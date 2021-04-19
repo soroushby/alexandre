@@ -20,6 +20,7 @@ import { ArchitectureComponent } from './portflio/architecture/architecture.comp
 import { BakeryComponent } from './portflio/bakery/bakery.component';
 import { RestaurantComponent } from './portflio/restaurant/restaurant.component';
 import { AddProjectComponent } from './add-project/add-project.component';
+import { FirstFormStepComponent } from './add-project/components/first-form-step/first-form-step.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AddProjectComponent } from './add-project/add-project.component';
     BakeryComponent,
     RestaurantComponent,
     AddProjectComponent,
+    FirstFormStepComponent,
   ],
   imports: [
     BrowserModule,

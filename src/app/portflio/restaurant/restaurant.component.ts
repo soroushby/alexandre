@@ -30,26 +30,29 @@ export class RestaurantComponent implements OnInit {
 
   ngOnInit(): void {
     this.data = this.dataService.gotData.pipe(
-      map((x) => x.filter((x) => x.categories == 'restaurant'))
+      map((projects: ProjectData[]) =>
+        projects.filter((project) => project.categories === 'restaurant')
+      )
     );
 
-    this.data1 = this.dataService.gotData
-      .pipe(
-        map((x) =>
-          x.filter((x) => x.categories == 'restaurant').map((x) => x.id)
-        )
-      )
-      .subscribe((x) => (this.id = x));
+    // this.data1 = this.dataService.gotData
+    //   .pipe(
+    //     map((projects:) =>
+    //       x.filter((x) => x.categories === 'restaurant').map((x) => x.id)
+    //     )
+    //   )
+    //   .subscribe((x) => (this.id = x));
   }
 
-  onFileSelected(event: any, idMain: any) {
+  onFileSelected(event: any, projectId: any) {
     const file: File = event.target.files[0];
-    const filePath = `projects/${idMain}/${file.name}`;
+    const filePath = `projects/${projectId}/${file.name}`;
     const task = this.storage.upload(filePath, file);
     this.downloadUrl$ = task.snapshotChanges().pipe(
       last(),
       concatMap(() => this.storage.ref(filePath).getDownloadURL())
     );
+
     this.downloadUrl$.subscribe(console.log);
     // if (file) {
     //   this.fileName = file.name;

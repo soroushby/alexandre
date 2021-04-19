@@ -1,6 +1,6 @@
 export interface ProjectData {
-  description?: any;
-  id?: any;
-  categories?: any;
-  photo?: any;
+  id?: string;
+  description?: string;
+  categories?: string;
+  photoUrl?: string;
 }

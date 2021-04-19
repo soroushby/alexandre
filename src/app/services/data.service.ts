@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { AngularFirestore, DocumentReference } from '@angular/fire/firestore';
 import { map } from 'rxjs/operators';
 
-import { Observable } from 'rxjs';
+import { from, Observable } from 'rxjs';
 import { ProjectData } from '../interfaces/project-data';
 @Injectable({
   providedIn: 'root',
@@ -10,11 +10,8 @@ import { ProjectData } from '../interfaces/project-data';
 export class DataService {
   constructor(private db: AngularFirestore) {}
 
-  addProject(description: any, categories: any) {
-    this.db.collection('projects').add({
-      description: description,
-      categories: categories,
-    });
+  addProject(project: ProjectData): Observable<DocumentReference<any>> {
+    return from(this.db.collection('projects').add({ ...project }));
   }
 
   deleteProjects(id: any) {

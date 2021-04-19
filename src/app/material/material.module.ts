@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSelectModule } from '@angular/material/select';
 import { MaterialFileInputModule } from 'ngx-material-file-input';
+import { MatStepperModule } from '@angular/material/stepper';
 
 @NgModule({
   declarations: [],
@@ -29,6 +30,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     MatGridListModule,
     MatSelectModule,
     MaterialFileInputModule,
+    MatStepperModule,
   ],
   exports: [
     MatButtonModule,
@@ -43,6 +45,7 @@ import { MaterialFileInputModule } from 'ngx-material-file-input';
     MatGridListModule,
     MatSelectModule,
     MaterialFileInputModule,
+    MatStepperModule,
   ],
 })
 export class MaterialModule {}

@@ -1,8 +1,13 @@
-import { map } from 'rxjs/operators';
+import { concatMap, last, map } from 'rxjs/operators';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { DataService } from './../services/data.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, Validators } from '@angular/forms';
+import {
+  AbstractControl,
+  FormBuilder,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
 import {
@@ -18,11 +23,15 @@ import { ProjectData } from '../interfaces/project-data';
   styleUrls: ['./add-project.component.scss'],
 })
 export class AddProjectComponent implements OnInit {
-  // @Input
-  // requiredFileType:string
   form: any;
   fileName = '';
   data: any;
+  projectPhotoUrl: any | undefined;
+
+  isLinear = false;
+  firstFormGroup: FormGroup | undefined;
+  secondFormGroup: FormGroup | undefined;
+
   categories: any = [
     { value: 'restaurant', viewValue: 'restaurant' },
     { value: 'boulangerie', viewValue: 'boulangerie' },
@@ -40,26 +49,33 @@ export class AddProjectComponent implements OnInit {
       description: ['', Validators.required],
       categories: ['', Validators.required],
     });
+
     this.data = this.dataService.gotData
       .pipe(map((x) => x.map((x) => x.id)))
       .subscribe((x) => (this.data = x));
   }
-  onAddDatas() {
-    this.dataService.addProject(
-      this.form.get('description').value,
-      this.form.get('categories').value
-    );
+
+  onSaveProject() {
+    const description = this.form.get('description').value;
+    const categories = this.form.get('categories').value;
+
+    let project: ProjectData = {
+      description,
+      categories,
+    };
+
+    this.dataService.addProject(project);
   }
 
-  // onFileSelected(event: any) {
-  //   const file: File = event.target.files[0];
-  //   const filePath = `courses/${this.data}/${file.name}`;
-  //   const task = this.storage.upload(filePath, file);
-  //   task.snapshotChanges().subscribe((x) => console.log(x));
-  //   // if (file) {
-  //   //   this.fileName = file.name;
+  onFileSelected(event: any) {
+    const file: File = event.target.files[0];
+    // const filePath = `projects/${projectId}/${file.name}`;
+    // const task = this.storage.upload(filePath, file);
+    // this.projectPhotoUrl = task.snapshotChanges().pipe(
+    //   last(),
+    //   concatMap(() => this.storage.ref(filePath).getDownloadURL())
+    // );
 
-  //   //   console.log(this.fileName);
-  //   // }
-  // }
+    // this.projectPhotoUrl.subscribe(console.log);
+  }
 }

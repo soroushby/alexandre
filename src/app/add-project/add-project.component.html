@@ -1,4 +1,13 @@
 <div class="main" fxLayoutAlign="center center">
+  <mat-horizontal-stepper [linear]="isLinear" #stepper>
+    <mat-step label="Add project">
+      <app-first-form-step></app-first-form-step>
+    </mat-step>
+    <mat-step label="Add project image"> Add project image here </mat-step>
+  </mat-horizontal-stepper>
+</div>
+
+<!-- <div class="main" fxLayoutAlign="center center">
   <mat-card class="card">
     <form class="container" [formGroup]="form">
       <div fxLayout="column" fxLayoutAlign="center center" ngClass.lt-md="res">
@@ -24,22 +33,24 @@
             </mat-option>
           </mat-select>
         </mat-form-field>
-        <!-- <input
-          type="file"
-          class="file-input"
-          #fileupload
-          (change)="onFileSelected($event)"
-          formControlName="photo"
-        />
-        <div>
-          <mat-form-field>
-            <input matInput [disabled]="true" [value]="fileName" />
-          </mat-form-field>
 
-          <button mat-mini-fab color="primary" (click)="fileupload.click()">
-            <mat-icon>attach_file</mat-icon>
-          </button>
-        </div> -->
+        <ng-container>
+          <input
+            type="file"
+            class="file-input"
+            #fileupload
+            (change)="onFileSelected($event)"
+          />
+          <div>
+            <mat-form-field>
+              <input matInput [disabled]="true" [value]="fileName" />
+            </mat-form-field>
+
+            <button mat-mini-fab color="primary" (click)="fileupload.click()">
+              <mat-icon>attach_file</mat-icon>
+            </button>
+          </div>
+        </ng-container>
         <button
           mat-raised-button
           style="float: right"
@@ -54,4 +65,30 @@
 
     {{ form.value | json }}
   </mat-card>
-</div>
+</div> -->
+
+<!-- <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field>
+        <mat-label>Address</mat-label>
+        <input
+          matInput
+          formControlName="secondCtrl"
+          placeholder="Ex. 1 Main St, New York, NY"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step> -->
