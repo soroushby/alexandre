@@ -8,20 +8,26 @@
       matInput
       placeholder="Last name, First name"
       formControlName="description"
+      [disabled]="isNewProjectAdded"
       required
     />
   </mat-form-field>
 
   <mat-form-field appearance="fill">
     <mat-label>Category</mat-label>
-    <mat-select formControlName="categories">
+    <mat-select formControlName="categories" [disabled]="isNewProjectAdded">
       <mat-option *ngFor="let category of categories" [value]="category.value">
         {{ category.viewValue }}
       </mat-option>
     </mat-select>
   </mat-form-field>
   <div class="save">
-    <button mat-raised-button (click)="onSaveProject()" color="primary">
+    <button
+      mat-raised-button
+      (click)="onSaveProject()"
+      color="primary"
+      *ngIf="!isNewProjectAdded"
+    >
       Save
     </button>
   </div>

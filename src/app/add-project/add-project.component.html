@@ -1,9 +1,14 @@
 <div class="main" fxLayoutAlign="center center">
   <mat-horizontal-stepper [linear]="isLinear" #stepper>
     <mat-step label="Add project">
-      <app-first-form-step></app-first-form-step>
+      <app-first-form-step
+        (emitProjectId)="onNewProject($event)"
+      ></app-first-form-step>
     </mat-step>
-    <mat-step label="Add project image"> Add project image here </mat-step>
+
+    <mat-step label="Add project image" *ngIf="newProjectId">
+      <app-add-project-image [id]="newProjectId"></app-add-project-image>
+    </mat-step>
   </mat-horizontal-stepper>
 </div>
 

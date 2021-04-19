@@ -28,6 +28,8 @@ export class AddProjectComponent implements OnInit {
   data: any;
   projectPhotoUrl: any | undefined;
 
+  newProjectId: string | undefined;
+
   isLinear = false;
   firstFormGroup: FormGroup | undefined;
   secondFormGroup: FormGroup | undefined;
@@ -77,5 +79,13 @@ export class AddProjectComponent implements OnInit {
     // );
 
     // this.projectPhotoUrl.subscribe(console.log);
+  }
+
+  onNewProject(project: ProjectData) {
+    console.log(`on new project :: `, project);
+    if (!project) {
+      return;
+    }
+    this.newProjectId = project.id;
   }
 }
