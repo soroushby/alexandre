@@ -7,16 +7,33 @@
   fxLayoutAlign="center center"
   fxLayoutGap="6rem"
 >
-  <h1>Boulangerie</h1>
-  <!-- <ng-container *ngIf="data | async as items">
+  <h1 ngClass.lt-lg="responsiveTxt">Restaurant&Bar</h1>
+  <ng-container *ngIf="data | async as items">
     <div *ngFor="let item of items">
-      <mat-card class="main-card">
-        <img class="img" src="../../../assets/1.jpg" alt="render of bakery" />
-        <div class="test1">{{ item.description }}</div>
+      <mat-card class="main-card" ngClass.lt-lg="responsiveCard">
+        <img class="img" ngClass.lt-lg="responsiveImg" [src]="item.photoUrl" />
+
+        <div class="test1" fxLayoutAlign="center">
+          Name:{{ item.description }}
+        </div>
+        <div class="test1">
+          {{ item.id }}
+        </div>
+        <ng-container>
+          <button
+            fxFlexAlign="center"
+            class="submit-button"
+            color="warn"
+            mat-raised-button
+            (click)="onDeleteProject(item.id)"
+          >
+            Delete
+          </button>
+        </ng-container>
       </mat-card>
     </div>
-  </ng-container> -->
-  <div class="line"></div>
+  </ng-container>
+  <div class="line" fxHide.lt-lg></div>
 </div>
 
 <div
@@ -77,11 +94,3 @@
     >
   </p>
 </div>
-<ng-container *ngIf="data | async as items">
-  <!-- <div *ngFor="let item of items">
-    <mat-card class="main-card">
-      <div class="test1">{{ item.description }}</div>
-      <div>{{ item.photo }}</div>
-    </mat-card>
-  </div> -->
-</ng-container>

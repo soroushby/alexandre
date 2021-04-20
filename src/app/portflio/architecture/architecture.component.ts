@@ -11,11 +11,15 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class ArchitectureComponent implements OnInit {
   data: Observable<ProjectData[]> | undefined;
-  constructor(private datasService: DataService) {}
+  constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.data = this.datasService.gotData.pipe(
+    this.data = this.dataService.gotData.pipe(
       map((x) => x.filter((x) => x.categories == 'architecture'))
     );
+  }
+
+  onDeleteProject(id: any) {
+    return this.dataService.deleteProjects(id);
   }
 }
