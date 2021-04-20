@@ -1,3 +1,4 @@
+import { DataService } from 'src/app/services/data.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
 import { last, concatMap } from 'rxjs/operators';
@@ -9,10 +10,14 @@ import { last, concatMap } from 'rxjs/operators';
 })
 export class AddProjectImageComponent implements OnInit {
   @Input() id: string | undefined; // decorate the property with @Input()
+
   fileName = '';
   data: any;
   projectPhotoUrl: any | undefined;
-  constructor(private storage: AngularFireStorage) {}
+  constructor(
+    private storage: AngularFireStorage,
+    private dataService: DataService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -24,7 +29,7 @@ export class AddProjectImageComponent implements OnInit {
       last(),
       concatMap(() => this.storage.ref(filePath).getDownloadURL())
     );
-
+    // this.dataService.updataData(this.id, this.projectPhotoUrl);
     this.projectPhotoUrl.subscribe(console.log);
   }
 }

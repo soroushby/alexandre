@@ -4,6 +4,7 @@ import { map } from 'rxjs/operators';
 
 import { from, Observable } from 'rxjs';
 import { ProjectData } from '../interfaces/project-data';
+import { isNgTemplate } from '@angular/compiler';
 @Injectable({
   providedIn: 'root',
 })
@@ -32,4 +33,11 @@ export class DataService {
         )
       )
     );
+
+  updataData(id: any, photoUrl: any) {
+    return this.db
+      .collection('projects')
+      .doc(id)
+      .set({ photoUrl: photoUrl }, { merge: true });
+  }
 }

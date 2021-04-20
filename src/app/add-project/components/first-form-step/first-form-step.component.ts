@@ -65,6 +65,7 @@ export class FirstFormStepComponent implements OnInit {
     let project: ProjectData = {
       description,
       categories,
+      photoUrl: '',
     };
 
     this.dataService.addProject(project).subscribe(() => {
