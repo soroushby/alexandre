@@ -1,7 +1,8 @@
 import { DataService } from 'src/app/services/data.service';
 import { Component, OnInit, Input } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/storage';
-import { last, concatMap } from 'rxjs/operators';
+import { last, concatMap, take } from 'rxjs/operators';
+import { ProjectData } from 'src/app/interfaces/project-data';
 
 @Component({
   selector: 'app-add-project-image',
@@ -9,11 +10,11 @@ import { last, concatMap } from 'rxjs/operators';
   styleUrls: ['./add-project-image.component.scss'],
 })
 export class AddProjectImageComponent implements OnInit {
-  @Input() id: string | undefined; // decorate the property with @Input()
+  @Input() project!: ProjectData;
 
+  file: File | undefined;
   fileName = '';
-  data: any;
-  projectPhotoUrl: any | undefined;
+  projectPhotoUrl: string | undefined;
   constructor(
     private storage: AngularFireStorage,
     private dataService: DataService
@@ -22,14 +23,28 @@ export class AddProjectImageComponent implements OnInit {
   ngOnInit(): void {}
 
   onFileSelected(event: any) {
-    const file: File = event.target.files[0];
-    const filePath = `projects/${this.id}/${file.name}`;
-    const task = this.storage.upload(filePath, file);
-    this.projectPhotoUrl = task.snapshotChanges().pipe(
-      last(),
-      concatMap(() => this.storage.ref(filePath).getDownloadURL())
-    );
-    // this.dataService.updataData(this.id, this.projectPhotoUrl);
-    this.projectPhotoUrl.subscribe(console.log);
+    this.file = event.target.files[0];
+    this.fileName = this.file?.name ?? '';
+  }
+
+  onUpload() {
+    const filePath = `projects/${this.project.id}/${this.file?.name}`;
+    const task = this.storage.upload(filePath, this.file);
+
+    task
+      .snapshotChanges()
+      .pipe(
+        last(),
+        concatMap(() => this.storage.ref(filePath).getDownloadURL()),
+        take(1)
+      )
+      .subscribe((fileUrl) => {
+        this.projectPhotoUrl = fileUrl;
+        console.log(fileUrl);
+        this.dataService.updataProject(this.project.id, {
+          ...this.project,
+          photoUrl: this.projectPhotoUrl,
+        });
+      });
   }
 }

@@ -28,7 +28,7 @@ export class AddProjectComponent implements OnInit {
   data: any;
   projectPhotoUrl: any | undefined;
 
-  newProjectId: string | undefined;
+  project: ProjectData | undefined;
 
   isLinear = false;
   firstFormGroup: FormGroup | undefined;
@@ -71,21 +71,13 @@ export class AddProjectComponent implements OnInit {
 
   onFileSelected(event: any) {
     const file: File = event.target.files[0];
-    // const filePath = `projects/${projectId}/${file.name}`;
-    // const task = this.storage.upload(filePath, file);
-    // this.projectPhotoUrl = task.snapshotChanges().pipe(
-    //   last(),
-    //   concatMap(() => this.storage.ref(filePath).getDownloadURL())
-    // );
-
-    // this.projectPhotoUrl.subscribe(console.log);
   }
 
   onNewProject(project: ProjectData) {
-    console.log(`on new project :: `, project);
     if (!project) {
       return;
     }
-    this.newProjectId = project.id;
+
+    this.project = project;
   }
 }

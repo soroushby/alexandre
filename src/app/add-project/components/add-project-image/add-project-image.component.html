@@ -13,5 +13,14 @@
     <button mat-mini-fab color="primary" (click)="fileupload.click()">
       <mat-icon>attach_file</mat-icon>
     </button>
+
+    <button
+      mat-raised-button
+      (click)="onUpload()"
+      [disabled]="!file"
+      color="primary"
+    >
+      Upload image
+    </button>
   </div>
 </ng-container>

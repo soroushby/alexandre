@@ -34,10 +34,8 @@ export class DataService {
       )
     );
 
-  updataData(id: any, photoUrl: any) {
-    return this.db
-      .collection('projects')
-      .doc(id)
-      .set({ photoUrl: photoUrl }, { merge: true });
+  updataProject(id: any, project: ProjectData) {
+    console.log('updataProject :: ', project);
+    return this.db.collection('projects').doc(id).update(project);
   }
 }

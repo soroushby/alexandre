@@ -6,8 +6,8 @@
       ></app-first-form-step>
     </mat-step>
 
-    <mat-step label="Add project image" *ngIf="newProjectId">
-      <app-add-project-image [id]="newProjectId"></app-add-project-image>
+    <mat-step label="Add project image" *ngIf="!!project">
+      <app-add-project-image [project]="project"></app-add-project-image>
     </mat-step>
   </mat-horizontal-stepper>
 </div>

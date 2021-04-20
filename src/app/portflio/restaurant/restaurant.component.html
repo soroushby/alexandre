@@ -11,40 +11,15 @@
   <ng-container *ngIf="data | async as items">
     <div *ngFor="let item of items">
       <mat-card class="main-card" ngClass.lt-lg="responsiveCard">
-        <img
-          class="img"
-          ngClass.lt-lg="responsiveImg"
-          [src]="downloadUrl$ | async"
-        />
+        <img class="img" ngClass.lt-lg="responsiveImg" [src]="item.photoUrl" />
 
         <div class="test1" fxLayoutAlign="center">
           Name:{{ item.description }}
         </div>
-        <div
-          class="test1"
-          name="someInput"
-          [(ngModel)]="someInput"
-          ngDefaultControl
-          #idMain
-        >
+        <div class="test1" name="someInput">
           {{ item.id }}
         </div>
         <ng-container>
-          <input
-            type="file"
-            class="file-input"
-            #fileupload
-            (change)="onFileSelected($event, item.id)"
-          />
-          <div>
-            <mat-form-field>
-              <input matInput [disabled]="true" [value]="fileName" />
-            </mat-form-field>
-
-            <button mat-mini-fab color="primary" (click)="fileupload.click()">
-              <mat-icon>attach_file</mat-icon>
-            </button>
-          </div>
           <button
             fxFlexAlign="center"
             class="submit-button"
