@@ -10,7 +10,13 @@
   <h1 ngClass.lt-lg="responsiveTxt">Restaurant&Bar</h1>
   <ng-container *ngIf="data | async as items">
     <div *ngFor="let item of items">
-      <mat-card class="main-card" ngClass.lt-lg="responsiveCard">
+      <mat-card
+        class="main-card"
+        ngClass.lt-lg="responsiveCard"
+        fxLayout.lt-lg="column"
+        fxLayoutAlign.lt-lg="start center"
+        fxLayoutGap.lt-lg="1rem"
+      >
         <img class="img" ngClass.lt-lg="responsiveImg" [src]="item.photoUrl" />
 
         <div class="test1" fxLayoutAlign="center">
@@ -19,13 +25,14 @@
         <div class="test1">
           {{ item.id }}
         </div>
-        <ng-container>
+        <ng-container *ngIf="auth.user$ | async as user">
           <button
             fxFlexAlign="center"
             class="submit-button"
             color="warn"
             mat-raised-button
             (click)="onDeleteProject(item.id)"
+            *ngIf="user.email == 'r.man9@yahoo.com'"
           >
             Delete
           </button>

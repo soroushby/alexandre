@@ -12,8 +12,8 @@
   .img {
     //background-size: cover;
     background-position: center;
-    height: 70rem;
-    width: 135rem;
+    height: 50rem;
+    width: 60rem;
   }
 }
 
@@ -73,6 +73,26 @@ h1 {
   }
 }
 
-.test1 {
-  font-size: 10rem;
+.image {
+  width: 4rem;
+  height: 4rem;
+}
+
+.file-input {
+  font-size: 2rem;
+}
+
+.responsiveCard {
+  width: 30rem !important;
+  height: 25rem !important;
+}
+
+.responsiveImg {
+  width: 20rem !important;
+  height: 12rem !important;
+}
+
+.responsiveTxt {
+  font-size: 2.3rem;
+  margin-top: 10rem !important;
 }
