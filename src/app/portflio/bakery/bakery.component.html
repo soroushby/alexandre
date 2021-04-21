@@ -8,17 +8,25 @@
   fxLayoutGap="6rem"
 >
   <h1 ngClass.lt-lg="responsiveTxt">BOULANGERIE</h1>
+
+  <h2 ngClass.lt-lg="responsiveTxt">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+    Rerum amet dolorem repellat fugit et quos Lorem ipsum<br />
+    dolor sit amet consectetur adipisicing elit.<br />
+    Rerum amet dolorem repellat fugit et quos
+  </h2>
+
   <ng-container *ngIf="data | async as items">
     <div *ngFor="let item of items">
       <mat-card class="main-card" ngClass.lt-lg="responsiveCard">
         <img class="img" ngClass.lt-lg="responsiveImg" [src]="item.photoUrl" />
 
         <div class="test1" fxLayoutAlign="center">
-          Name:{{ item.description }}
+          About This Image: {{ item.description }}
         </div>
-        <div class="test1">
+        <!-- <div class="test1">
           {{ item.id }}
-        </div>
+        </div> -->
         <ng-container *ngIf="auth.user$ | async as user">
           <button
             fxFlexAlign="center"
@@ -34,7 +42,7 @@
       </mat-card>
     </div>
   </ng-container>
-  <div class="line" fxHide.lt-lg></div>
+  <div class="line" ngClass.lt-lg="responsiveLine"></div>
 </div>
 
 <div

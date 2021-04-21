@@ -20,11 +20,11 @@
         <img class="img" ngClass.lt-lg="responsiveImg" [src]="item.photoUrl" />
 
         <div class="test1" fxLayoutAlign="center">
-          Name:{{ item.description }}
+          {{ item.description }}
         </div>
-        <div class="test1">
+        <!-- <div class="test1">
           {{ item.id }}
-        </div>
+        </div> -->
         <ng-container *ngIf="auth.user$ | async as user">
           <button
             fxFlexAlign="center"
