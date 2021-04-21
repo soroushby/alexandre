@@ -8,21 +8,19 @@
   fxLayoutGap="6rem"
 >
   <h1 ngClass.lt-lg="responsiveTxt">BOULANGERIE</h1>
-
-  <h2 ngClass.lt-lg="responsiveTxt">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
-    Rerum amet dolorem repellat fugit et quos Lorem ipsum<br />
-    dolor sit amet consectetur adipisicing elit.<br />
-    Rerum amet dolorem repellat fugit et quos
-  </h2>
-
   <ng-container *ngIf="data | async as items">
     <div *ngFor="let item of items">
-      <mat-card class="main-card" ngClass.lt-lg="responsiveCard">
+      <mat-card
+        class="main-card"
+        ngClass.lt-lg="responsiveCard"
+        fxLayout.lt-lg="column"
+        fxLayoutAlign.lt-lg="start center"
+        fxLayoutGap.lt-lg="1rem"
+      >
         <img class="img" ngClass.lt-lg="responsiveImg" [src]="item.photoUrl" />
 
-        <div class="test1" fxLayoutAlign="center">
-          About This Image: {{ item.description }}
+        <div class="test1" fxLayoutAlign="center center">
+          {{ item.description }}
         </div>
         <!-- <div class="test1">
           {{ item.id }}
@@ -42,7 +40,7 @@
       </mat-card>
     </div>
   </ng-container>
-  <div class="line" ngClass.lt-lg="responsiveLine"></div>
+  <div class="line" fxHide.lt-lg></div>
 </div>
 
 <div
