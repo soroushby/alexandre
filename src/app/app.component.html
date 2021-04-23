@@ -1,5 +1,5 @@
-<mat-sidenav-container class="example-container">
-  <!-- <mat-sidenav #sidenav class="sidenav"></mat-sidenav> -->
+<!-- <mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="sidenav"></mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="res">
       <span class="example-spacer"></span>
@@ -58,7 +58,7 @@
                 *ngIf="user.email == 'r.man9@yahoo.com'"
               >
                 <a
-                  routerLink="/addeproject"
+                  routerLink="/addproject"
                   routerLinkActive="active"
                   fxLayoutAlign="center center"
                   >ADD Project<mat-icon class="nav-list__item-icon">
@@ -71,6 +71,82 @@
           </ul>
         </nav>
       </div>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav class="sidenav">
+    <mat-nav-list
+      role="list"
+      fxLayoutAlign="center center"
+      fxLayout="column"
+      fxLayoutAlign="center end"
+      class="list"
+    >
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/welcome"
+        (click)="sidenav.close()"
+        class="matlist item items link"
+        >Accueil</mat-list-item
+      >
+
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/aboutme"
+        (click)="sidenav.close()"
+        class="matlist item items link"
+        >À Propos</mat-list-item
+      >
+
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/architecture"
+        (click)="sidenav.close()"
+        class="matlist item items link"
+        >Architecture</mat-list-item
+      >
+
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/boulangerie"
+        (click)="sidenav.close()"
+        class="matlist item items link"
+        >Boulangerie</mat-list-item
+      >
+
+      <mat-list-item
+        role="listitem"
+        fxLayoutAlign="center center"
+        routerLink="/restaurant"
+        (click)="sidenav.close()"
+        class="matlist item items link"
+        >Restaurant&Bar</mat-list-item
+      >
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="res" fxLayout="row" role="heading">
+      <button
+        fxFlex
+        (click)="sidenav.toggle()"
+        mat-icon-button
+        class="example-icon sidenav_button"
+        fxLayoutAlign="end center"
+        aria-label="Example icon-button with menu icon"
+      >
+        <mat-icon>menu</mat-icon>
+      </button>
+
+      <ul role="list" fxLayout="row" fxLayoutGap="3.5rem"></ul>
+      <!-- <span class="example-spacer"></span> -->
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>

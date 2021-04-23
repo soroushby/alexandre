@@ -162,11 +162,13 @@
       min-width: 30rem;
       box-shadow: none;
       border-radius: 0;
+      border-top: 2rem;
 
       // border-style: solid;
       // border-width: 8px;
       // border-color: #d4af37;
       border: 5px solid #d4af37;
+      margin-top: 2rem;
     }
 
     &__content {

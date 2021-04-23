@@ -9,7 +9,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent {
   title = 'rezaMashadiWeb';
-
+  fade: boolean | undefined;
   constructor(
     @Inject(DOCUMENT) public document: Document,
     public auth: AuthService

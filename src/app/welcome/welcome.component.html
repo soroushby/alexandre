@@ -24,7 +24,7 @@
       ngClass.lt-lg="responsive1"
       fxLayoutGap.lt-lg="4rem"
     >
-      <div class="col-1-of-3" fxFlex>
+      <div class="col-1-of-3" fxFlex fxHide.lt-lg>
         <div class="card">
           <div class="card__side card__side--front">
             <div class="card__picture card__picture-1">&nbsp;</div>
@@ -46,7 +46,7 @@
         </div>
       </div>
 
-      <div class="col-2-of-3" fxFlex>
+      <div class="col-2-of-3" fxFlex fxHide.lt-lg>
         <div class="card">
           <div class="card__side card__side--front">
             <div class="card__picture card__picture-2">&nbsp;</div>
@@ -68,7 +68,81 @@
         </div>
       </div>
 
-      <div class="col-3-of-3" fxFlex>
+      <div class="col-3-of-3" fxFlex fxHide.lt-lg>
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-3">&nbsp;</div>
+          </div>
+          <div
+            class="card__side card__side--back card__side--back-1"
+            fxLayoutAlign="center center"
+            fxLayout="column"
+          >
+            <div class="card__heading">Architecture</div>
+            <div class="card__cta">
+              <div class="btn-position">
+                <a routerLink="/architecture" class="btn btn-white"
+                  >see more &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      fxLayout="column"
+      fxFlex
+      fxHide.gt-sm
+      fxLayoutGap="3rem"
+      ngClass.lt-sm="responsive7"
+    >
+      <div class="col-1-of-3" fxFlex fxShow.lt-md>
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-1">&nbsp;</div>
+          </div>
+          <div
+            class="card__side card__side--back card__side--back-1"
+            fxLayoutAlign="center center"
+            fxLayout="column"
+          >
+            <div class="card__heading">Restaurant&Bar</div>
+            <div class="card__cta">
+              <div class="btn-position">
+                <a routerLink="/restaurant" class="btn btn-white"
+                  >see more &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-2-of-3" fxFlex fxShow.lt-md>
+        <div class="card">
+          <div class="card__side card__side--front">
+            <div class="card__picture card__picture-2">&nbsp;</div>
+          </div>
+          <div
+            class="card__side card__side--back card__side--back-1"
+            fxLayoutAlign="center center"
+            fxLayout="column"
+          >
+            <div class="card__heading">Boulangerie</div>
+            <div class="card__cta">
+              <div class="btn-position">
+                <a routerLink="/boulangerie" class="btn btn-white"
+                  >see more &rarr;</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3-of-3" fxFlex fxShow.lt-md>
         <div class="card">
           <div class="card__side card__side--front">
             <div class="card__picture card__picture-3">&nbsp;</div>
