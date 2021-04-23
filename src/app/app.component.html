@@ -129,6 +129,35 @@
         class="matlist item items link"
         >Restaurant&Bar</mat-list-item
       >
+      <mat-list-item fxLayoutAlign="center center">
+        <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut">
+          <button
+            mat-raised-button
+            (click)="auth.logout({ returnTo: document.location.origin })"
+          >
+            Log out
+          </button>
+        </ng-container>
+
+        <ng-template #loggedOut>
+          <button mat-raised-button (click)="auth.loginWithRedirect()">
+            Log in
+          </button>
+        </ng-template>
+
+        <ul *ngIf="auth.user$ | async as user">
+          <li class="nav-list__item" *ngIf="user.email == 'r.man9@yahoo.com'">
+            <a
+              routerLink="/addproject"
+              routerLinkActive="active"
+              fxLayoutAlign="center center"
+              >ADD Project<mat-icon class="nav-list__item-icon">
+                video_call</mat-icon
+              >
+            </a>
+          </li>
+        </ul>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
 
