@@ -37,12 +37,12 @@ h1 {
   width: 71.5rem;
 }
 
-.test1 {
-  font-size: 2rem;
-  height: 5rem;
-  background-color: black;
-  color: beige;
-}
+// .test1 {
+//   font-size: 2rem;
+//   height: 5rem;
+//   background-color: black;
+//   color: beige;
+// }
 
 .main4 {
   background-color: black;
@@ -101,4 +101,8 @@ h1 {
 .responsiveTxt {
   font-size: 2.3rem;
   margin-top: 10rem !important;
+}
+
+mat-card {
+  background-color: black;
 }
